@@ -57,7 +57,7 @@ To install the simulator package, clone the repo with the simulator and starter 
 Personally, I installed the simulator package in the ```~/test_catkin_ws``` because I have installed other packages in the ```~/catkin_ws```. If you want to separate the workspace as I did, you can make a new directory as I created.
 As a result, I did: 
 
-    cd ~/test_catkin_ws/src
+    cd ~/f1_ws/src
     git clone https://github.com/Leedk3/EE405_a_eurecar_f1_tenth_project.git
 
 
@@ -72,7 +72,7 @@ There are two methods for installing the particle filter; with GPU support and w
 **Installing with GPU Support**  
 Keep this terminal open and pay special attention to the next step. The particle filter package depends heavily on the GPU and its architecture, so it becomes very important to match the architecture of the GPU in your local machine to the one listed in the configuration of `setup.py`. 
 
-    ~/test_catkin_ws/src/range_libc/pywrapper
+    ~/f1_ws/src/range_libc/pywrapper
     gedit setup.py
 
 We are particularly interested in the `sm_xx` value associated with the GPU and more information can be found in this [article](https://arnon.dk/matching-sm-architectures-arch-and-gencode-for-various-nvidia-cards/) which is a good reference for understanding types NVIDIA's GPU. Once the architecture type has been identified, go back to the terminal and open the setup file using an editor of your choice and navigate to line 96:
@@ -83,7 +83,7 @@ nvcc_flags = ['-arch=sm_20', '--ptxas-options=-v', '-c', '--compiler-options', "
 
 Replace `-arch=sm_20` with the `-arch=sm_xx` value from the article in the link provided above. Personally, I use NVIDIA 2080 GPU, I have changed it `-arch=sm_75`. Once you have made the changes, save the file and exit back to the terminal and enter the following command to compile the library and follow the instruction on the screen:
 
-    ~/test_catkin_ws/src/range_libc/pywrapper
+    ~/f1_ws/src/range_libc/pywrapper
     ./compile_with_cuda.sh
 
 
@@ -105,7 +105,7 @@ Then run ```catkin_make``` to build it:
 
 In my case, I worked in the ```test_catkin_ws``` directory and I did:
 
-    cd ~/test_catkin_ws
+    cd ~/f1_ws
     catkin_make
     source ~/test_catkin_ws/devel/setup.bash
         
