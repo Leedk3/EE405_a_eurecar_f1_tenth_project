@@ -29,7 +29,8 @@ def vels(speed, turn):
 
 if __name__== '__main__':
   settings    = termios.tcgetattr(sys.stdin)
-  command_pub = rospy.Publisher('/{}/teleop/command'.format(str(sys.argv[1])), AckermannDrive, queue_size = 1)
+  # command_pub = rospy.Publisher('/{}/teleop/command'.format(str(sys.argv[1])), AckermannDrive, queue_size = 1)
+  command_pub = rospy.Publisher('/{}/command'.format(str(sys.argv[1])), AckermannDrive, queue_size = 1)
   rospy.init_node('keyboard_teleop', anonymous = True)
 
   speed  = 0.0
@@ -47,7 +48,7 @@ if __name__== '__main__':
           angle = 0.0
           if (key == '\x03'):
              break
-       command                = AckermannDrive();
+       command                = AckermannDrive()
        command.speed          = speed * speed_limit
        command.steering_angle = angle * angle_limit
        command_pub.publish(command)
@@ -56,7 +57,7 @@ if __name__== '__main__':
     print('raise exception: key binding error')
 
   finally:
-    command = AckermannDrive();
+    command = AckermannDrive()
     command.speed = speed * speed_limit
     command.steering_angle = angle * angle_limit
     command_pub.publish(command)
