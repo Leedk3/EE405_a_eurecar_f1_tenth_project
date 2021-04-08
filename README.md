@@ -125,8 +125,8 @@ This will launch everything you need for a full simulation; roscore, the simulat
 You can change the gazebo world map by modifying the 'world_name' argument in the simulator.launch file.
 
 
-<img src="./pics/gazebo_oval_track.png"> 
-<img src="./pics/track_catia_2.png">
+<img src="./tutorial/pics/gazebo_oval_track.png"> 
+<img src="./tutorial/pics/track_catia_2.png">
 
 ### Manually control the vehicle in the simulator
 
@@ -145,11 +145,11 @@ Click the terminal where the keyboard_teleop node is running, and press your key
 
 You can test to generate a 2-D map using a sensor model in the gazebo environment. This figure is an example of map building process in gazebo environment. The sensors used for map building are 2D Hokuyo LiDAR and 3DM-GX5-25 IMU sensors.
 
-<img src="./pics/mapping_in_gazebo.png">
+<img src="./tutorial/pics/mapping_in_gazebo.png">
 
 Here is the result of the generated 2D map using Google Cartographer in the track.
 
-<img src="./pics/rviz_google_cartographer.png">
+<img src="./tutorial/pics/rviz_google_cartographer.png">
 
 As a 2D map building algorithm, Hector SLAM, Gmapping, and Cartographer are mainly used. Please refer to the following site:
 
