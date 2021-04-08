@@ -1,5 +1,9 @@
 # EE405 F1tenth Project (F1TENTH Racecar Simulator)
 This project is based on F1TENTH Project.
+
+[https://github.com/Leedk3/EE405_a_eurecar_f1_tenth_project](https://github.com/Leedk3/EE405_a_eurecar_f1_tenth_project)
+
+This project is based on F1TENTH Project.
 Please refer to the following site:
 
 [https://f1tenth.org/](https://f1tenth.org/)
