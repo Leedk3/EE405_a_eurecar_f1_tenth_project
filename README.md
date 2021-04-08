@@ -48,20 +48,20 @@ The full list of dependencies can be found in the ```package.xml``` file.
 To install the simulator package, clone the repo with the simulator and starter code into your catkin workspace:
 
     cd ~/catkin_ws/src
-    git clone https://github.com/Leedk3/eurecar_f1_tenth.git
+    git clone https://github.com/Leedk3/EE405_a_eurecar_f1_tenth_project.git
     
 Personally, I installed the simulator package in the ```~/f1_ws``` because I have installed other packages in the ```~/catkin_ws```. If you want to separate the workspace as I did, you can make a new directory as I created.
 As a result, I did: 
 
     cd ~/f1_ws/src
-    git clone https://github.com/Leedk3/eurecar_f1_tenth.git
+    git clone https://github.com/Leedk3/EE405_a_eurecar_f1_tenth_project.git
 
 
 
 ### For gazebo environment
 The source for the required packages, including the simulator, are now in the workspace. The simulator depends on the GPU particle filter developed by the MIT RACECAR team and this package has to be configured before compiling the ROS packages. Navigate to the ```range_libc``` folder to compile the library necessary for the particle filter. Open a new terminal and enter the following commands:
 
-    pip install cython
+    pip install --user cython
 
 There are two methods for installing the particle filter; with GPU support and without GPU support. We recommend using the package with GPU support, but leave the decision to you.
 
