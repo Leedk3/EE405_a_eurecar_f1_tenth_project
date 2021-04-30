@@ -178,9 +178,9 @@ sudo apt-get --only-upgrade install ros-*
 
 Issue 2) [REST.cc:205] Error in REST request
 
-: You need to change ~/.ignition/fuel/config.yaml as following.
+: You need to change a line at ~/.ignition/fuel/config.yaml as following.
 
-from
+Modify the line
 
 url: https://api.ignitionfuel.org
 
